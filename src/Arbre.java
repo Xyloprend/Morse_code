@@ -13,22 +13,34 @@ public class Arbre {
 		droite = null;
 	}
 	
+	public Arbre(int n, Arbre gauche, Arbre droite)
+	{
+		this.n = n;
+		
+	}
 	
 			// Nos fonctions
 	//fonction pour séparer chaque caractère dans une phrase de 'i' caractères
 	public char[] parser(String phrase) {
-		char[] tableau= new char[phrase.length()];
+		char[] tableau= new char[phrase.length()];	// création d'un tableau de caractère
 		int i;
 		
 		for(i=0; i<phrase.length(); i++)
 		{
 			// tableau[i] = phrase[i];  Pourquoi ça ne marche pas ça ? JE me doute que c'est le string mais bon ..
-			tableau[i] = phrase.charAt(i);
+			tableau[i] = phrase.charAt(i);			// On recopie une phrase dans un tableau de caractères
 		}
 		
-		if(i==phrase.length()) {	tableau[i]='\0';	}
+		if(i==phrase.length()) {	tableau[i]='\0';	}	//On clot le tableau
 		
 		return tableau;
+	}
+	
+	//fonction pour afficher le caractère en fonction du chemin parcouru dans l'arbre
+	public char[] affichage() {
+		
+		
+		
 	}
 	
 	
